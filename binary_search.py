@@ -1,5 +1,5 @@
 def binary_search(arr, target):
-    left, right = 0, len(arr)
+    left, right = 0, len(arr) - 1  # ✅ right index should be len(arr) - 1
     while left <= right:
         mid = (left + right) // 2
         if arr[mid] == target:
@@ -10,4 +10,4 @@ def binary_search(arr, target):
             right = mid - 1
     return -1
 
-print(binary_search([1, 2, 3, 4, 5], 5))  # Expected 4
+print(binary_search([1, 2, 3, 4, 5], 5))  # Output: 4
